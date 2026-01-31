@@ -317,7 +317,7 @@ async function loadAboutData() {
 		document.getElementById("footerEmail").innerText = about.email;
 
 		document.getElementById("aboutDob").innerText =
-			new Date(about.dob).toLocaleDateString();
+			new Date(about.dob).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 
 		document.getElementById("aboutImage").style.backgroundImage =
 			`url('${about.image}')`;
@@ -326,15 +326,29 @@ async function loadAboutData() {
 		const interestContainer = document.getElementById("interestContainer");
 		interestContainer.innerHTML = "";
 
-		about.interest.forEach(item => {
-			interestContainer.innerHTML += `
-				<div class="interest-wrap d-flex align-items-center mr-3">
-					<div class="icon d-flex align-items-center justify-content-center">
-						<span class="flaticon-listening"></span>
+		// Define icons for different interests
+		const interestIcons = {
+			'Coding': 'flaticon-web-programming',
+			'Gaming': 'flaticon-video-player',
+			'Self Growing': 'flaticon-suitcase',
+			'Learning new things': 'flaticon-listening'
+		};
+
+		about.interest.forEach(interestString => {
+			// Split the comma-separated string into individual interests
+			const interests = interestString.split(',').map(item => item.trim());
+
+			interests.forEach(interest => {
+				const iconClass = interestIcons[interest] || 'flaticon-listening'; // Default icon
+				interestContainer.innerHTML += `
+					<div class="interest-wrap d-flex align-items-center mr-3">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="${iconClass}"></span>
+						</div>
+						<div class="text">${interest}</div>
 					</div>
-					<div class="text">${item}</div>
-				</div>
-			`;
+				`;
+			});
 		});
 
 	} catch (err) {
