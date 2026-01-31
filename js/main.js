@@ -673,7 +673,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     projectsResult.data.forEach(project => {
       const col = document.createElement("div");
-      col.className = "col-md-3 mb-4";
+      col.className = "col-md-4 mb-4";
 
       // Ensure https for image URL
       let imageUrl = project.image;
