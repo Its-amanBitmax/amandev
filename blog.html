@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>CodebyAman - Blog</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="css/animate.css">
+
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Toast Notification Styles */
+    .toast-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 9999;
+    }
+
+    .toast {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: white;
+      padding: 16px 20px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transform: translateX(400px);
+      opacity: 0;
+      transition: all 0.3s ease;
+      max-width: 350px;
+    }
+
+    .toast.show {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    .toast.error {
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    }
+
+    .toast .toast-icon {
+      margin-right: 12px;
+      font-size: 1.1rem;
+    }
+
+    .toast .toast-close {
+      margin-left: auto;
+      cursor: pointer;
+      opacity: 0.8;
+      transition: opacity 0.2s ease;
+      padding: 0 4px;
+    }
+
+    .toast .toast-close:hover {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
+   <div class="container">
+     <a class="navbar-brand" href="index.html">CodebyAman<span>.</span></a>
+     <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="oi oi-menu"></span> Menu
+     </button>
+
+     <div class="collapse navbar-collapse" id="ftco-nav">
+       <ul class="navbar-nav nav ml-auto">
+         <li class="nav-item"><a href="index.html#home-section" class="nav-link"><span>Home</span></a></li>
+         <li class="nav-item"><a href="index.html#about-section" class="nav-link"><span>About</span></a></li>
+         <li class="nav-item"><a href="index.html#skills-section" class="nav-link"><span>Skills</span></a></li>
+         <li class="nav-item"><a href="index.html#services-section" class="nav-link"><span>Services</span></a></li>
+         <li class="nav-item"><a href="index.html#projects-section" class="nav-link"><span>Projects</span></a></li>
+         <li class="nav-item"><a href="index.html#blog-section" class="nav-link"><span>Blog</span></a></li>
+         <li class="nav-item"><a href="index.html#contact-section" class="nav-link"><span>Contact</span></a></li>
+       </ul>
+     </div>
+   </div>
+ </nav>
+
+ <section class="hero-wrap hero-wrap-2" id="blogHero" style="background-image: url('images/bg_4.jpg');" data-stellar-background-ratio="0.5">
+  <div class="overlay" style="background: rgba(0, 0, 0, 0.1);"></div>
+  <div class="container">
+    <div class="row no-gutters slider-text align-items-end justify-content-center">
+      <div class="col-md-9 ftco-animate pb-5 text-center">
+       <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span> <span class="mr-2"><a href="index.html#blog-section">Blog <i class="fa fa-chevron-right"></i></a></span> <span>Blog Single <i class="fa fa-chevron-right"></i></span></p>
+       <h1 class="mb-0 bread" id="blogTitle">Blog details</h1>
+     </div>
+   </div>
+ </div>
+</section>
+
+
+<section class="ftco-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 ftco-animate">
+        <!-- Blog Header -->
+        <div class="blog-header mb-5">
+          <h1 class="blog-title mb-4" id="blogSubject" style="font-size: 2.5rem; font-weight: 700; color: #1a1a1a; line-height: 1.2;">Loading...</h1>
+          <div class="blog-meta mb-4" style="display: flex; align-items: center; gap: 20px; color: #6b7280; font-size: 0.9rem;">
+            <span style="display: flex; align-items: center; gap: 5px;">
+              <i class="fa fa-calendar"></i>
+              <span id="blogDate">Loading...</span>
+            </span>
+            <span style="display: flex; align-items: center; gap: 5px;">
+              <i class="fa fa-user"></i>
+              <span>CodebyAman</span>
+            </span>
+            <span style="display: flex; align-items: center; gap: 5px;">
+              <i class="fa fa-clock-o"></i>
+              <span>5 min read</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Blog Image Section -->
+        <div id="blogImageSection" class="blog-featured-image mb-5" style="display: none;">
+          <div style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+            <img id="blogImage" src="" alt="Blog Image" style="width: 100%; height: auto; display: block; transition: transform 0.3s ease;" />
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 100px; background: linear-gradient(transparent, rgba(0,0,0,0.3));"></div>
+          </div>
+        </div>
+
+        <!-- Blog Content -->
+        <div class="blog-content mb-5" id="blogContent" style="font-size: 1.1rem; line-height: 1.8; color: #374151;">
+          <p>Loading blog content...</p>
+        </div>
+
+        <!-- Tags -->
+        <div class="blog-tags mb-5" id="blogTags">
+          <!-- Tags will be loaded here -->
+        </div>
+
+        <!-- Author Section -->
+        <div class="author-section mb-5" id="blogAuthor">
+          <!-- Author info will be loaded here -->
+        </div>
+
+        <!-- Comments Section -->
+        <div class="comments-section">
+          <div class="comments-header mb-4" style="border-bottom: 2px solid #e5e7eb; padding-bottom: 15px;">
+            <h3 style="font-size: 1.8rem; font-weight: 600; color: #1f2937; margin: 0;">
+              <i class="fa fa-comments mr-2" style="color: #3b82f6;"></i>
+              Comments
+            </h3>
+          </div>
+
+          <div id="commentsSection" class="comments-list mb-5">
+            <div class="loading-comments" style="text-align: center; padding: 40px; color: #6b7280;">
+              <i class="fa fa-spinner fa-spin fa-2x mb-3"></i>
+              <p>Loading comments...</p>
+            </div>
+          </div>
+
+          <!-- Comment Form -->
+          <div class="comment-form-container">
+            <div class="form-header mb-4">
+              <h4 style="font-size: 1.4rem; font-weight: 600; color: #1f2937;">
+                <i class="fa fa-pencil mr-2" style="color: #10b981;"></i>
+                Leave a Comment
+              </h4>
+              <p style="color: #6b7280; margin: 5px 0 0 0;">Share your thoughts and join the conversation</p>
+            </div>
+
+            <form id="commentForm" class="comment-form" style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); border-radius: 16px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="name" style="font-weight: 500; color: #374151; margin-bottom: 8px; display: block;">Name *</label>
+                  <input type="text" class="form-control" id="name" required style="border-radius: 8px; border: 2px solid #e5e7eb; padding: 12px 16px; font-size: 0.95rem; transition: border-color 0.2s ease;">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="email" style="font-weight: 500; color: #374151; margin-bottom: 8px; display: block;">Email *</label>
+                  <input type="email" class="form-control" id="email" required style="border-radius: 8px; border: 2px solid #e5e7eb; padding: 12px 16px; font-size: 0.95rem; transition: border-color 0.2s ease;">
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="website" style="font-weight: 500; color: #374151; margin-bottom: 8px; display: block;">Website</label>
+                <input type="url" class="form-control" id="website" style="border-radius: 8px; border: 2px solid #e5e7eb; padding: 12px 16px; font-size: 0.95rem; transition: border-color 0.2s ease;">
+              </div>
+              <div class="mb-4">
+                <label for="message" style="font-weight: 500; color: #374151; margin-bottom: 8px; display: block;">Message *</label>
+                <textarea name="" id="message" cols="30" rows="6" class="form-control" required style="border-radius: 8px; border: 2px solid #e5e7eb; padding: 12px 16px; font-size: 0.95rem; resize: vertical; transition: border-color 0.2s ease;"></textarea>
+              </div>
+              <div class="text-right">
+                <button type="submit" class="btn btn-primary" style="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); border: none; border-radius: 8px; padding: 12px 30px; font-weight: 600; font-size: 0.95rem; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                  <i class="fa fa-paper-plane mr-2"></i>Post Comment
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div> <!-- .col-lg-8 -->
+      <div class="col-lg-4 sidebar ftco-animate">
+        <!-- Search Widget -->
+        <div class="sidebar-widget mb-4" style="background: #ffffff; border-radius: 16px; padding: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+          <h4 style="font-size: 1.2rem; font-weight: 600; color: #1f2937; margin-bottom: 20px; display: flex; align-items: center;">
+            <i class="fa fa-search mr-2" style="color: #6b7280;"></i>
+            Search
+          </h4>
+          <form action="#" class="search-form">
+            <div style="position: relative;">
+              <input type="text" class="form-control" placeholder="Search articles..." style="border-radius: 25px; border: 2px solid #e5e7eb; padding: 12px 20px; padding-right: 50px; font-size: 0.9rem; transition: border-color 0.2s ease;">
+              <button type="submit" style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); background: #3b82f6; border: none; border-radius: 50%; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; color: white; transition: background-color 0.2s ease;">
+                <i class="fa fa-search" style="font-size: 0.8rem;"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Categories Widget -->
+        <div class="sidebar-widget mb-4" style="background: #ffffff; border-radius: 16px; padding: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+          <h4 style="font-size: 1.2rem; font-weight: 600; color: #1f2937; margin-bottom: 20px; display: flex; align-items: center;">
+            <i class="fa fa-tags mr-2" style="color: #f59e0b;"></i>
+            Categories
+          </h4>
+          <ul class="categories" id="blogCategories" style="list-style: none; padding: 0; margin: 0;">
+            <!-- Categories will be loaded here -->
+          </ul>
+        </div>
+
+        <!-- Recent Blogs Widget -->
+        <div class="sidebar-widget mb-4" style="background: #ffffff; border-radius: 16px; padding: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+          <h4 style="font-size: 1.2rem; font-weight: 600; color: #1f2937; margin-bottom: 20px; display: flex; align-items: center;">
+            <i class="fa fa-clock-o mr-2" style="color: #10b981;"></i>
+            Recent Posts
+          </h4>
+          <div id="recentBlogs" class="recent-blogs">
+            <!-- Recent blogs will be loaded here -->
+          </div>
+        </div>
+
+        <!-- Newsletter Widget -->
+        <div class="sidebar-widget" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 16px; padding: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); color: white;">
+          <h4 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 15px; display: flex; align-items: center;">
+            <i class="fa fa-envelope mr-2"></i>
+            Newsletter
+          </h4>
+          <p style="margin-bottom: 20px; opacity: 0.9; font-size: 0.9rem;">Stay updated with the latest articles and insights.</p>
+          <form>
+            <div style="position: relative; margin-bottom: 15px;">
+              <input type="email" placeholder="Your email address" style="width: 100%; border-radius: 25px; border: none; padding: 12px 20px; font-size: 0.9rem;">
+            </div>
+            <button type="submit" style="width: 100%; background: rgba(255,255,255,0.2); border: 2px solid rgba(255,255,255,0.3); border-radius: 25px; padding: 12px; color: white; font-weight: 600; transition: all 0.2s ease;">
+              <i class="fa fa-paper-plane mr-2"></i>Subscribe
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section> <!-- .section -->
+
+
+<footer class="ftco-footer ftco-section">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-md">
+        <div class="ftco-footer-widget mb-4">
+          <h2 class="ftco-heading-2">Lets talk about</h2>
+          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+          <p><a href="#" class="btn btn-primary">Learn more</a></p>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="ftco-footer-widget mb-4 ml-md-4">
+          <h2 class="ftco-heading-2">Links</h2>
+          <ul class="list-unstyled">
+            <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Home</a></li>
+            <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>About</a></li>
+            <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Services</a></li>
+            <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Projects</a></li>
+            <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Contact</a></li>
+          </ul>
+        </div>
+      </div>
+				<div class="col-md">
+					<div class="ftco-footer-widget mb-4">
+						<h2 class="ftco-heading-2">Services</h2>
+						<ul class="list-unstyled" id="footerServices">
+							<!-- Services will be loaded dynamically -->
+						</ul>
+					</div>
+				</div>
+				<div class="col-md">
+					<div class="ftco-footer-widget mb-4">
+						<h2 class="ftco-heading-2">Have a Questions?</h2>
+						<div class="block-23 mb-3">
+							<ul>
+								<li><span class="icon fa fa-map marker"></span><span class="text" id="footerAddress"></span></li>
+								<li><a href="#"><span class="icon fa fa-phone"></span><span class="text" id="footerPhone"></span></a></li>
+								<li><a href="#"><span class="icon fa fa-paper-plane pr-4"></span><span class="text" id="footerEmail"></span></a></li>
+							</ul>
+						</div>
+						<ul class="ftco-footer-social list-unstyled mt-2" id="footerSocialLinks">
+							<!-- Social links will be loaded dynamically -->
+						</ul>
+					</div>
+				</div>
+</div>
+<div class="row">
+  <div class="col-md-12 text-center">
+
+    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+      Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | The CodebyAman is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="#" target="_blank">Aman Singh</a>
+      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+    </div>
+  </div>
+</div>
+</footer>
+
+
+
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&amp;sensor=false"></script>
+<script src="js/google-map.js"></script>
+
+<script src="js/main.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const blogId = urlParams.get('id');
+
+  if (!blogId) {
+    document.getElementById('blogContent').innerHTML = '<p>Blog not found.</p>';
+    return;
+  }
+
+  // Load comments for this blog
+  await loadComments(blogId);
+
+  try {
+    const res = await fetch(`https://portfolio-48mo.onrender.com/api/blogs/${blogId}`);
+    const result = await res.json();
+
+    if (!result.success || !result.data) {
+      document.getElementById('blogContent').innerHTML = '<p>Blog not found.</p>';
+      return;
+    }
+
+    const blog = result.data;
+    // console.log('Blog data:', blog);
+
+    // Update title
+    document.getElementById('blogTitle').textContent = blog.subject;
+    document.getElementById('blogSubject').textContent = blog.subject;
+
+    // Update blog date
+    const blogDate = new Date(blog.createdAt).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+    document.getElementById('blogDate').textContent = blogDate;
+
+    // Display blog image in dedicated section
+    if (blog.image) {
+      let imageUrl = blog.image;
+      // console.log('Original image URL:', imageUrl);
+      // console.log('Image URL type:', typeof imageUrl);
+
+      // Extract the actual Cloudinary URL from malformed URLs
+      if (imageUrl.includes('https://res.cloudinary.com')) {
+        const cloudinaryMatch = imageUrl.match(/https:\/\/res\.cloudinary\.com[^\s]+/);
+        if (cloudinaryMatch) {
+          imageUrl = cloudinaryMatch[0];
+        }
+      }
+
+      if (imageUrl.startsWith('https://')) {
+        imageUrl = imageUrl.replace('https://', 'https://');
+      }
+      // console.log('Processed image URL:', imageUrl);
+
+      // Show the image immediately and handle loading
+      const blogImageElement = document.getElementById('blogImage');
+      const blogImageSection = document.getElementById('blogImageSection');
+
+      blogImageElement.src = imageUrl;
+      blogImageElement.style.display = 'block';
+      blogImageSection.style.display = 'block';
+
+      // Add error handling
+      blogImageElement.onerror = function() {
+        // console.log('Image failed to load, hiding section');
+        blogImageSection.style.display = 'none';
+      };
+
+      blogImageElement.onload = function() {
+        // console.log('Blog image loaded and displayed successfully');
+      };
+
+      // console.log('Blog image element src set to:', imageUrl);
+    } else {
+      // console.log('No blog image found in blog data');
+      // Try to show a fallback image or hide the section
+      const blogImageSection = document.getElementById('blogImageSection');
+      blogImageSection.style.display = 'none';
+    }
+
+    // Update content
+    document.getElementById('blogContent').innerHTML = `
+      <p>${blog.description}</p>
+      ${blog.image ? `<p><img src="${blog.image}" alt="" class="img-fluid"></p>` : ''}
+    `;
+
+    // Update tags
+    if (blog.tags && blog.tags.length > 0) {
+      document.getElementById('blogTags').innerHTML = `
+        <div class="tagcloud">
+          ${blog.tags.map(tag => `<a href="#" class="tag-cloud-link">${tag}</a>`).join('')}
+        </div>
+      `;
+    }
+
+    // Update author (using about data)
+    try {
+      const aboutRes = await fetch("https://portfolio-48mo.onrender.com/api/about");
+      const aboutResult = await aboutRes.json();
+
+      if (aboutResult.success && aboutResult.data.length > 0) {
+        const about = aboutResult.data[0];
+        document.getElementById('blogAuthor').innerHTML = `
+         <div
+  style="
+    display:flex;
+    align-items:center;
+    gap:24px;
+    background:#ffffff;
+    padding:24px 28px;
+    border-radius:16px;
+    box-shadow:0 10px 28px rgba(0,0,0,0.08);
+  "
+>
+
+  <!-- IMAGE -->
+  <div
+    class="bio"
+    style="
+      flex-shrink:0;
+      width:120px;
+      height:120px;
+      border-radius:16px;
+      overflow:hidden;
+      background:#f3f4f6;
+    "
+  >
+    <img
+      src="${about.image || 'images/person_1.jpg'}"
+      alt="Author"
+      style="
+        width:100%;
+        height:100%;
+        object-fit:cover;
+      "
+    >
+  </div>
+
+  <!-- TEXT -->
+  <div class="desc">
+    <h3
+      style="
+        font-size:22px;
+        font-weight:600;
+        color:#111827;
+        margin-bottom:8px;
+      "
+    >
+      ${about.name || 'Aman'}
+    </h3>
+
+    <p
+      style="
+        font-size:15px;
+        line-height:1.7;
+        color:#6b7280;
+        margin:0;
+      "
+    >
+      ${about.description || 'Fullstack Developer & Builder'}
+    </p>
+  </div>
+
+</div>
+
+        `;
+      }
+    } catch (err) {
+      console.error("About load error:", err);
+    }
+
+    // Load recent blogs for sidebar
+    try {
+      const blogsRes = await fetch("https://portfolio-48mo.onrender.com/api/blogs");
+      const blogsResult = await blogsRes.json();
+
+      if (blogsResult.success && blogsResult.data) {
+        const recentBlogs = blogsResult.data.slice(0, 3); // Get first 3 blogs
+        document.getElementById('recentBlogs').innerHTML = recentBlogs.map(b => `
+          <div class="block-21 mb-4 d-flex">
+            <a class="blog-img mr-4" style="background-image: url('${b.image}');"></a>
+            <div class="text">
+              <h3 class="heading"><a href="blog.html?id=${b._id}">${b.subject}</a></h3>
+              <div class="meta">
+                <div><a href="#"><span class="icon-calendar"></span> ${new Date(b.createdAt).toDateString()}</a></div>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+    } catch (err) {
+      console.error("Recent blogs load error:", err);
+    }
+
+  } catch (err) {
+    console.error("Blog load error:", err);
+    document.getElementById('blogContent').innerHTML = '<p>Error loading blog.</p>';
+  }
+});
+
+// Function to load comments for a specific blog
+async function loadComments(blogId) {
+  try {
+    const res = await fetch(`https://portfolio-48mo.onrender.com/api/comments?blogId=${blogId}`);
+    const result = await res.json();
+
+    if (result.success && result.data) {
+      displayComments(result.data);
+    } else {
+      document.getElementById('commentsSection').innerHTML = '<p>No comments yet. Be the first to comment!</p>';
+    }
+  } catch (err) {
+    console.error("Comments load error:", err);
+    document.getElementById('commentsSection').innerHTML = '<p>Error loading comments.</p>';
+  }
+}
+
+// Function to get relative time
+function getRelativeTime(dateString) {
+  const now = new Date();
+  const commentDate = new Date(dateString);
+  const diffInSeconds = Math.floor((now - commentDate) / 1000);
+
+  if (diffInSeconds < 60) {
+    return 'Just now';
+  } else if (diffInSeconds < 3600) {
+    const minutes = Math.floor(diffInSeconds / 60);
+    return `${minutes} minute${minutes > 1 ? 's' : ''} ago`;
+  } else if (diffInSeconds < 86400) {
+    const hours = Math.floor(diffInSeconds / 3600);
+    return `${hours} hour${hours > 1 ? 's' : ''} ago`;
+  } else if (diffInSeconds < 604800) {
+    const days = Math.floor(diffInSeconds / 86400);
+    return `${days} day${days > 1 ? 's' : ''} ago`;
+  } else if (diffInSeconds < 2592000) {
+    const weeks = Math.floor(diffInSeconds / 604800);
+    return `${weeks} week${weeks > 1 ? 's' : ''} ago`;
+  } else if (diffInSeconds < 31536000) {
+    const months = Math.floor(diffInSeconds / 2592000);
+    return `${months} month${months > 1 ? 's' : ''} ago`;
+  } else {
+    const years = Math.floor(diffInSeconds / 31536000);
+    return `${years} year${years > 1 ? 's' : ''} ago`;
+  }
+}
+
+// Function to display comments
+function displayComments(comments) {
+  if (!comments || comments.length === 0) {
+    document.getElementById('commentsSection').innerHTML = '<p>No comments yet. Be the first to comment!</p>';
+    return;
+  }
+
+  const commentsHTML = comments.map(comment => `
+    <div class="comment mb-4 p-3 bg-light rounded">
+      <div class="d-flex align-items-center mb-2">
+        <strong class="mr-2">${comment.name}</strong>
+        <small class="text-muted">${getRelativeTime(comment.createdAt)}</small>
+      </div>
+      <p class="mb-0">${comment.message}</p>
+      ${comment.website ? `<small><a href="${comment.website}" target="_blank">${comment.website}</a></small>` : ''}
+    </div>
+  `).join('');
+
+  document.getElementById('commentsSection').innerHTML = commentsHTML;
+}
+
+// Toast notification function
+function showToast(message, type = 'success') {
+  const toastContainer = document.getElementById('toastContainer');
+
+  const toast = document.createElement('div');
+  toast.className = `toast ${type === 'error' ? 'error' : ''}`;
+
+  toast.innerHTML = `
+    <i class="fa ${type === 'error' ? 'fa-exclamation-triangle' : 'fa-check-circle'} toast-icon"></i>
+    <span>${message}</span>
+    <span class="toast-close" onclick="this.parentElement.remove()">×</span>
+  `;
+
+  toastContainer.appendChild(toast);
+
+  // Trigger animation
+  setTimeout(() => toast.classList.add('show'), 10);
+
+  // Auto remove after 5 seconds
+  setTimeout(() => {
+    toast.classList.remove('show');
+    setTimeout(() => toast.remove(), 300);
+  }, 5000);
+}
+
+// Handle comment form submission
+document.getElementById('commentForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const blogId = urlParams.get('id');
+
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const website = document.getElementById('website').value.trim();
+  const message = document.getElementById('message').value.trim();
+
+  if (!name || !email || !message) {
+    showToast('Please fill in all required fields.', 'error');
+    return;
+  }
+
+  const commentData = {
+    name,
+    email,
+    website: website || undefined,
+    message,
+    blogId
+  };
+
+  try {
+    const res = await fetch('https://portfolio-48mo.onrender.com/api/comments/create', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(commentData)
+    });
+
+    const result = await res.json();
+
+    if (result.success) {
+      alert('Comment posted successfully!');
+      // Clear form
+      document.getElementById('commentForm').reset();
+      // Reload comments
+      await loadComments(blogId);
+    } else {
+      alert('Failed to post comment. Please try again.');
+    }
+  } catch (err) {
+    console.error("Comment submission error:", err);
+    showToast('Error posting comment. Please try again.', 'error');
+  }
+});
+
+// Load footer services and contact info
+document.addEventListener("DOMContentLoaded", async () => {
+  // Load footer services
+  try {
+    const res = await fetch("https://portfolio-48mo.onrender.com/api/service");
+    const result = await res.json();
+
+    if (result.success) {
+      const footerServicesContainer = document.getElementById("footerServices");
+      if (footerServicesContainer) {
+        footerServicesContainer.innerHTML = "";
+        result.data.forEach(service => {
+          footerServicesContainer.innerHTML += `
+            <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>${service.title}</a></li>
+          `;
+        });
+      }
+    }
+  } catch (err) {
+    console.error("Footer services load error:", err);
+  }
+
+  // Load footer contact info
+  try {
+    const res = await fetch("https://portfolio-48mo.onrender.com/api/contactinfo");
+    const result = await res.json();
+
+    if (result.success) {
+      const footerAddress = document.getElementById("footerAddress");
+      const footerPhone = document.getElementById("footerPhone");
+      const footerEmail = document.getElementById("footerEmail");
+      const footerSocialLinks = document.getElementById("footerSocialLinks");
+
+      // Update contact info
+      if (result.data.length > 0) {
+        const contact = result.data[0]; // Assuming first contact info
+        if (footerAddress) footerAddress.textContent = contact.description || "203 Fake St. Mountain View, San Francisco, California, USA";
+        if (footerPhone) footerPhone.textContent = contact.description || "+2 392 3929 210";
+        if (footerEmail) footerEmail.textContent = contact.description || "info@yourdomain.com";
+      }
+
+      // Update social links
+      if (footerSocialLinks) {
+        footerSocialLinks.innerHTML = "";
+        result.data.forEach((item, index) => {
+          const socialLinkHTML = `
+<li style="display:inline-flex; align-items:center; justify-content:center; margin-right:12px;">
+  <a href="${item.link}"
+     target="_blank"
+     style="width:36px; height:36px; display:flex; align-items:center; justify-content:center;
+            border-radius:50%; background:#f5f5f5; text-decoration:none;">
+
+    <img src="${item.image}"
+         alt="${item.title}"
+         style="width:100%; height:100%; object-fit:contain; border-radius:50%;">
+  </a>
+</li>
+          `;
+          footerSocialLinks.innerHTML += socialLinkHTML;
+        });
+      }
+    }
+  } catch (err) {
+    console.error("Footer contact info load error:", err);
+  }
+});
+</script>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+</body>
+</html>
