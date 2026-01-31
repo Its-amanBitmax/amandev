@@ -1135,19 +1135,82 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         `;
 
-        // Add all contact info items as clickable images to footer social links
+        // Add all contact info items as clickable images with title below to footer social links
         const socialLinkHTML = `
-<li style="display:inline-flex; align-items:center; justify-content:center; margin-right:12px;">
-  <a href="${item.link}" 
-     target="_blank"
-     style="width:36px; height:36px; display:flex; align-items:center; justify-content:center;
-            border-radius:50%; background:#f5f5f5; text-decoration:none;">
-    
-    <img src="${item.image}" 
-         alt="${item.title}"
-         style="width:100%; height:100%; object-fit:contain; border-radius:50%;">
+<li
+  style="
+    display:inline-flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    margin-right:22px;
+    list-style:none;
+    box-shadow:none !important;
+    filter:none !important;
+  "
+>
+  <a
+    href="${item.link}"
+    target="_blank"
+    style="
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:flex-start;
+      text-decoration:none;
+      color:#9ca3af;
+      font-size:12px;
+      box-shadow:none !important;
+      filter:none !important;
+    "
+    onmouseover="this.style.color='#ffffff'"
+    onmouseout="this.style.color='#9ca3af'"
+  >
+
+    <!-- ICON (TOP) -->
+    <div
+      style="
+        width:44px;
+        height:44px;
+        border-radius:50%;
+        background:#ffffff;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        margin-bottom:8px;
+        box-shadow:none !important;
+        filter:none !important;
+      "
+    >
+      <img
+        src="${item.image}"
+        alt="${item.title}"
+        style="
+          width:22px;
+          height:22px;
+          object-fit:contain;
+          box-shadow:none !important;
+          filter:none !important;
+        "
+      />
+    </div>
+
+    <!-- TEXT (BOTTOM – FIXED) -->
+    <span
+      style="
+        display:block;
+        font-size:12px;
+        line-height:1.2;
+        text-align:center;
+        margin-top:2px;
+      "
+    >
+     
+    </span>
+
   </a>
 </li>
+
         `;
         socialContainer.innerHTML += socialLinkHTML;
         // console.log("Added social link HTML:", socialLinkHTML);
