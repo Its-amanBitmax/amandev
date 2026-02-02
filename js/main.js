@@ -1241,7 +1241,7 @@ function pingServer() {
 pingServer();
 
 // then hit every 30 seconds
-setInterval(pingServer, 3000);
+setInterval(pingServer, 30000);
 
 
 
