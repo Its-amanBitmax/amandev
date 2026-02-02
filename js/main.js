@@ -1226,6 +1226,22 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+function pingServer() {
+  fetch("https://portfolio-48mo.onrender.com/api/test")
+    .then(response => response.json())
+    .then(data => {
+      console.log("Ping success:", data);
+    })
+    .catch(error => {
+      console.error("Ping error:", error);
+    });
+}
+
+// hit immediately once
+pingServer();
+
+// then hit every 30 seconds
+setInterval(pingServer, 3000);
 
 
 
